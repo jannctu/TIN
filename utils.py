@@ -159,7 +159,7 @@ def custom_kernel(shape,deg):
         for j in range(shape[1]):
             kd[i, j] = np.cos(np.deg2rad(deg)) * k[i, j] + np.sin(np.deg2rad(deg)) * k[i, j]
 
-    return k
+    return kd
 
 
 

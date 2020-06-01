@@ -8,7 +8,7 @@ class Enrichment(nn.Module):
     def __init__(self, c_in, rate=2):
         super(Enrichment, self).__init__()
         self.rate = rate
-		self.relu = nn.ReLU(inplace=True)
+        self.relu = nn.ReLU(inplace=True)
         self.conv = nn.Conv2d(c_in, 32, 3, stride=1, padding=1)
         dilation = self.rate*1 if self.rate >= 1 else 1
         self.conv1 = nn.Conv2d(32, 32, 3, stride=1, dilation=dilation, padding=dilation)
@@ -52,6 +52,9 @@ class TIN(nn.Module):
         self.conv1_2_down = nn.Conv2d(32, 8, 1, padding=0)
             # SCORE
         self.score_stage1 = nn.Conv2d(8, 1, 1)
+            # RELU
+        self.relu = nn.ReLU()
+
         if tin_m > 1:
             ## CONV stage 2
             self.conv2_1 = nn.Conv2d(16, 64, 3, padding=1)
@@ -65,9 +68,6 @@ class TIN(nn.Module):
                 # SCORE
             self.score_stage2 = nn.Conv2d(8, 1, 1)
 
-        # RELU
-        self.relu = nn.ReLU()
-        if tin_m > 1:
             # POOL
             self.maxpool = nn.MaxPool2d(2, stride=2, ceil_mode=True)  # pooling biasa
             self.score_final = nn.Conv2d(2, 1, 1)
