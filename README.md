@@ -25,7 +25,15 @@ Comparison of complexity and accuracy performance among various edge detection s
 #### Testing
 
         python inference.py
+		
+#### Manual Input
 
+        python test.py
+
+![image](https://github.com/jannctu/TIN/blob/master/img/lenna.png)
+![image](https://github.com/jannctu/TIN/blob/master/img/result_lenna.png)
+![image](https://github.com/jannctu/TIN/blob/master/img/mri_brain.jpg)
+![image](https://github.com/jannctu/TIN/blob/master/img/result_mri_brain.png)
 
 # Citing 
     @inproceedings{tin2020,
