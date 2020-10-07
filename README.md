@@ -1,7 +1,7 @@
 # Traditional Inspired Network
 This repository contains the implementation details of our paper:
 
-"**TRADITIONAL METHOD INSPIRED DEEP NEURAL NETWORK FOR EDGE DETECTION**"  
+"**[TRADITIONAL METHOD INSPIRED DEEP NEURAL NETWORK FOR EDGE DETECTION](https://ieeexplore.ieee.org/document/9190982)**"  
 by Jan Kristanto Wibisono , Hsueh-Ming Hang      
 
 ![image](https://github.com/jannctu/TIN/blob/master/img/result_BSDS.png)
@@ -36,10 +36,12 @@ Comparison of complexity and accuracy performance among various edge detection s
 ![image](https://github.com/jannctu/TIN/blob/master/img/result_mri_brain.png)
 
 # Citing 
-    @inproceedings{tin2020,
-      title={Traditional Method Inspired Deep Neural Network for Edge Detection},
-      author={Jan Kristanto Wibisono and Hsueh-Ming Hang},
-      booktitle={IEEE International Conference on Image Processing (ICIP)},
-      pages={soon--soon},
-      year={2020}
-    }
+@INPROCEEDINGS{9190982,
+  author={J. K. {Wibisono} and H. -M. {Hang}},
+  booktitle={2020 IEEE International Conference on Image Processing (ICIP)}, 
+  title={Traditional Method Inspired Deep Neural Network For Edge Detection}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={678-682},
+}
