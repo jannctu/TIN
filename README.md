@@ -35,13 +35,20 @@ Comparison of complexity and accuracy performance among various edge detection s
 ![image](https://github.com/jannctu/TIN/blob/master/img/mri_brain.jpg)
 ![image](https://github.com/jannctu/TIN/blob/master/img/result_mri_brain.png)
 
+### Training 
+
+        python train.py
+
 # Citing 
-@INPROCEEDINGS{9190982,
-  author={J. K. {Wibisono} and H. -M. {Hang}},
-  booktitle={2020 IEEE International Conference on Image Processing (ICIP)}, 
-  title={Traditional Method Inspired Deep Neural Network For Edge Detection}, 
-  year={2020},
-  volume={},
-  number={},
-  pages={678-682},
-}
+Thanks for your interest in our work, please consider citing:
+
+        @INPROCEEDINGS{9190982,
+          author={J. K. {Wibisono} and H. -M. {Hang}},
+          booktitle={2020 IEEE International Conference on Image Processing (ICIP)}, 
+          title={Traditional Method Inspired Deep Neural Network For Edge Detection}, 
+          year={2020},
+          volume={},
+          number={},
+          pages={678-682},
+        }
+

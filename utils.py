@@ -15,46 +15,10 @@ def plot_img(dat,rows,columns,fname):
             axarr[r, c].imshow(dat[counter], cmap='gray')
             axarr[r, c].axis('off')
             counter = counter + 1
-    #for i in range(1, columns*rows +1):
-    #for i in range(1,d+1):
-        #img = np.random.randint(10, size=(h,w))
-        #x = fig.add_subplot(rows, columns, i)
-        #x.title.set_text((i-1)*22.5)
-        #plt.imshow(x0, cmap='gray')
-        #axarr[0, 1].axis('off')
-        #plt.imshow(dat[i-1],cmap='gray')
     plt.savefig(fname, bbox_inches='tight')
 
 
 def init_model(model):
-    # b = np.array([[[[1, 0, -1], [2, 0, -2], [1, 0, -1]],
-    #                [[1, 2, 1], [0, 0, 0], [-1, -2, -1]],
-    #                [[2, 1, 0], [1, 0, -1], [0, -1, -2]],
-    #                [[0, 1, 2], [-1, 0, 1], [-2, -1, 0]],
-    #                [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]],
-    #                [[-2, -1, 0], [-1, 0, 1], [0, 1, 2]],
-    #                [[-1, -2, -1], [0, 0, 0], [1, 2, 1]],
-    #                [[0, -1, -2], [1, 0, -1], [2, 1, 0]]],
-    #               [[[1, 0, -1], [2, 0, -2], [1, 0, -1]],
-    #                [[1, 2, 1], [0, 0, 0], [-1, -2, -1]],
-    #                [[2, 1, 0], [1, 0, -1], [0, -1, -2]],
-    #                [[0, 1, 2], [-1, 0, 1], [-2, -1, 0]],
-    #                [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]],
-    #                [[-2, -1, 0], [-1, 0, 1], [0, 1, 2]],
-    #                [[-1, -2, -1], [0, 0, 0], [1, 2, 1]],
-    #                [[0, -1, -2], [1, 0, -1], [2, 1, 0]]],
-    #               [[[1, 0, -1], [2, 0, -2], [1, 0, -1]],
-    #                [[1, 2, 1], [0, 0, 0], [-1, -2, -1]],
-    #                [[2, 1, 0], [1, 0, -1], [0, -1, -2]],
-    #                [[0, 1, 2], [-1, 0, 1], [-2, -1, 0]],
-    #                [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]],
-    #                [[-2, -1, 0], [-1, 0, 1], [0, 1, 2]],
-    #                [[-1, -2, -1], [0, 0, 0], [1, 2, 1]],
-    #                [[0, -1, -2], [1, 0, -1], [2, 1, 0]]]
-    #               ])
-    # print(b.shape)
-    # aa = np.array([a,a,a])
-    #shape = (3,3)
     shape = (3, 3)
     a = np.array([custom_kernel(shape,0),
                  custom_kernel(shape, 22.5),
@@ -75,65 +39,7 @@ def init_model(model):
 
     a = np.array([a, a, a])
     a = np.transpose(a, (1, 0, 2, 3))
-    #print(a.shape)
-    #print(model.conv1_1.weight.data.shape)
-    #quit()
     model.conv1_1.weight.data = torch.from_numpy(a).float()
-    #plot_img(a[0])
-    # a = np.array([[custom_kernel(shape,0)],
-    #               [custom_kernel(shape,45)],
-    #               [custom_kernel(shape,90)],
-    #               [custom_kernel(shape,135)],
-    #               [custom_kernel(shape,180)],
-    #               [custom_kernel(shape,225)],
-    #               [custom_kernel(shape,270)],
-    #               [custom_kernel(shape,315)]],
-    #              [[custom_kernel(shape,0)],
-    #               [custom_kernel(shape,45)],
-    #               [custom_kernel(shape,90)],
-    #               [custom_kernel(shape,135)],
-    #               [custom_kernel(shape,180)],
-    #               [custom_kernel(shape,225)],
-    #               [custom_kernel(shape,270)],
-    #               [custom_kernel(shape,315)]],
-    #               [[custom_kernel(shape, 0)],
-    #                [custom_kernel(shape, 45)],
-    #                [custom_kernel(shape, 90)],
-    #                [custom_kernel(shape, 135)],
-    #                [custom_kernel(shape, 180)],
-    #                [custom_kernel(shape, 225)],
-    #                [custom_kernel(shape, 270)],
-    #                [custom_kernel(shape, 315)]]
-    #              )
-
-    #a = np.array([a, a, a])
-    #a = np.expand_dims(a, axis=1)
-    #aa = np.repeat(a, a, axis=0)
-    #a = np.transpose(a, (1, 0, 2, 3))
-    #print(a.shape)
-    #print(model.conv1.weight.data.shape)
-   # quit()
-    #model.conv1_1.weight.data = torch.from_numpy(a).float()
-
-    #x, y = np.mgrid[-5:6, -5:6]
-    #gaussian_kernel = np.exp(-(x ** 2 + y ** 2))
-    #print(model.conv2_1.weight.data.shape)
-    # Normalization
-    # gaussian_kernel = gaussian_kernel / gaussian_kernel.sum()
-    # gaussian_kernel = np.expand_dims(gaussian_kernel,axis=0)
-    #print(gaussian_kernel.shape)
-    #b = np.repeat(gaussian_kernel, 64, axis=0)
-    #b = np.expand_dims(b, axis=0)
-    #b = np.array([b, b, b])
-    #b = np.repeat(b, 16, axis=0)
-
-    #b = np.transpose(b, (1, 0, 2, 3))
-    #print(b.shape)
-    #print(gaussian_kernel)
-    #plt.imshow(gaussian_kernel, cmap=plt.get_cmap('jet'), interpolation='nearest')
-    #plt.colorbar()
-    #plt.show()
-    #model.conv2_1.weight.data = torch.from_numpy(b).float()
 
 def custom_sobel(shape, axis):
     """
